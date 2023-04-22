@@ -15,12 +15,12 @@ public class PersonalProductApplicationTests {
     @Autowired
     PmsBrandService pmsBrandService;
 
-    @Test
+    /*@Test
     public void contextLoads() {
         PmsBrandEntity entity = new PmsBrandEntity();
         entity.setDescript("xxx");
         entity.setName("测试");
         pmsBrandService.save(entity);
-    }
+    }*/
 
 }

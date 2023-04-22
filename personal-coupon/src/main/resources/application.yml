@@ -1,3 +1,9 @@
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://192.168.178.11:3306/personalMall_sms?useUnicode=true&characterEncodeing=UTF-8&useSSL=false&serverTimezone=GMT
+    driver-class-name: com.mysql.jdbc.Driver
 
 #mybatis
 mybatis-plus:
@@ -7,9 +13,6 @@ mybatis-plus:
     db-config:
       #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
       id-type: AUTO
-spring:
-  datasource:
-    username: root
-    password: root
-    url: jdbc:mysql://192.168.178.11:3306/personalMall_sms?useUnicode=true&characterEncodeing=UTF-8&useSSL=false&serverTimezone=GMT
-    driver-class-name: com.mysql.jdbc.Driver
+
+server:
+  port: 7000
