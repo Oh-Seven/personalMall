@@ -3,7 +3,6 @@ package com.personal.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-import com.personal.common.utils.PageUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.personal.product.entity.PmsAttrAttrgroupRelationEntity;
 import com.personal.product.service.PmsAttrAttrgroupRelationService;
+import com.personal.common.utils.PageUtils;
 import com.personal.common.utils.R;
 
 
@@ -22,7 +22,7 @@ import com.personal.common.utils.R;
  *
  * @author lee
  * @email 
- * @date 2023-04-21 14:03:59
+ * @date 2023-04-22 12:59:38
  */
 @RestController
 @RequestMapping("product/pmsattrattrgrouprelation")

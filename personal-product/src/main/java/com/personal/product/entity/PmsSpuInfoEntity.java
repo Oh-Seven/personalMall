@@ -13,7 +13,7 @@ import lombok.Data;
  * 
  * @author lee
  * @email 
- * @date 2023-04-21 14:03:59
+ * @date 2023-04-22 12:59:38
  */
 @Data
 @TableName("pms_spu_info")

@@ -12,7 +12,7 @@ import lombok.Data;
  * 
  * @author lee
  * @email 
- * @date 2023-04-21 13:58:18
+ * @date 2023-04-22 12:56:55
  */
 @Data
 @TableName("sms_seckill_sku_notice")

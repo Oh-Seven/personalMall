@@ -11,7 +11,7 @@ import java.util.Map;
  *
  * @author lee
  * @email 
- * @date 2023-04-21 13:58:18
+ * @date 2023-04-22 12:56:55
  */
 public interface SmsSpuBoundsService extends IService<SmsSpuBoundsEntity> {
 

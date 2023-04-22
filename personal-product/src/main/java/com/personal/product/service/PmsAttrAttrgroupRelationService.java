@@ -11,7 +11,7 @@ import java.util.Map;
  *
  * @author lee
  * @email 
- * @date 2023-04-21 14:03:59
+ * @date 2023-04-22 12:59:38
  */
 public interface PmsAttrAttrgroupRelationService extends IService<PmsAttrAttrgroupRelationEntity> {
 

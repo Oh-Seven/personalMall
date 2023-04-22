@@ -22,7 +22,7 @@ import com.personal.common.utils.R;
  *
  * @author lee
  * @email 
- * @date 2023-04-21 14:03:59
+ * @date 2023-04-22 12:59:38
  */
 @RestController
 @RequestMapping("product/pmscategorybrandrelation")
