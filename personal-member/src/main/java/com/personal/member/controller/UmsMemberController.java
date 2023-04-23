@@ -3,7 +3,10 @@ package com.personal.member.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.personal.member.fegin.CouponFegin;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,10 +29,18 @@ import com.personal.common.utils.R;
  */
 @RestController
 @RequestMapping("member/umsmember")
+@RefreshScope
 public class UmsMemberController {
     @Autowired
     private UmsMemberService umsMemberService;
 
+    @Autowired
+    private CouponFegin couponFegin;
+
+    @Value("${member.name}")
+    private String name;
+    @Value("${member.age}")
+    private Integer age;
     /**
      * 列表
      */
@@ -84,6 +95,23 @@ public class UmsMemberController {
 		umsMemberService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
+    }
+
+    /**
+     * 列表
+     */
+    @RequestMapping("/memberCoupon")
+    public R memberCoupon(){
+        UmsMemberEntity umsMemberEntity = new UmsMemberEntity();
+        umsMemberEntity.setUsername("lee");
+
+        R r = couponFegin.memeberCoupon();
+        return R.ok().put("memberCoupon", r.get("memberCoupon")).put("member",umsMemberEntity);
+    }
+
+    @RequestMapping("/nacosConfig")
+    public R nacosConfig(){
+        return R.ok().put("name", name).put("age",age);
     }
 
 }

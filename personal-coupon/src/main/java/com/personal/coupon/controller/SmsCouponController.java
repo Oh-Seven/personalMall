@@ -86,4 +86,19 @@ public class SmsCouponController {
         return R.ok();
     }
 
+    /**delete
+     * @description memeberCoupon
+     * @author lee
+     * @param: ids
+     * @date 2023/4/23 13:13
+     * @return: com.personal.common.utils.R
+     * @version 1.0
+     */
+    @RequestMapping("/memeber/coupon")
+    public R memeberCoupon(){
+        SmsCouponEntity smsCouponEntity = new SmsCouponEntity();
+        smsCouponEntity.setCouponName("满100减10");
+        return R.ok().put("memberCoupon",smsCouponEntity);
+    }
+
 }
