@@ -23,6 +23,6 @@ spring:
         - id: personal_admin
           uri: lb://personal.admin
           predicates:
-            - Path=/api/{segment}
+            - Path=/api/**
           filters:
             - RewritePath=/api/?(?<segment>.*), /renren-fast/$\{segment}
