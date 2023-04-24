@@ -1,0 +1,28 @@
+server:
+  port: 3000
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.178.11:8848
+    gateway:
+      routes:
+        - id: query_route
+          uri: https://baidu.com
+          predicates:
+            - Query=baidu
+        - id: query_route_2
+          uri: https://qq.com
+          predicates:
+            - Query=qq # 只要路径中含有qq即可
+        - id: query_route_2
+          uri: https://qq.com
+          predicates:
+            - Query=url,qq # url=qq 匹配这种参数形式
+        - id: personal_admin
+          uri: lb://personal.admin
+          predicates:
+            - Path=/api/{segment}
+          filters:
+            - RewritePath=/api/?(?<segment>.*), /renren-fast/$\{segment}
