@@ -1,6 +1,7 @@
 package com.personal.product.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,12 +34,12 @@ public class PmsCategoryController {
     /**
      * 列表
      */
-    @RequestMapping("/list")
+    @RequestMapping("/list/tree")
     //@RequiresPermissions("product:pmscategory:list")
     public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = pmsCategoryService.queryPage(params);
+        List<PmsCategoryEntity> pmsCategoryEntities = pmsCategoryService.listWithTree();
 
-        return R.ok().put("page", page);
+        return R.ok().put("treeData", pmsCategoryEntities);
     }
 
 

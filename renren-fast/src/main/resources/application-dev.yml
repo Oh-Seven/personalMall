@@ -32,7 +32,12 @@ spring:
                 wall:
                     config:
                         multi-statement-allow: true
-
+    application:
+        name: personal.admin
+    cloud:
+        nacos:
+            discovery:
+                server-addr: 192.168.178.11:8848
 
 ##多数据源的配置
 #dynamic:
